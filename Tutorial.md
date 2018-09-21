@@ -101,6 +101,20 @@ clearTimeout(id1);
 clearInterval(id2);
 ```
 
+> * #### 4 div 浮动在 canvas上
+
+​	要想 div 浮动在canvas上，两则都需要使用**绝对定位**，并将div的图层索引值（**z-index**）设置大于canvas
+
+```
+对于 div , 直接添加style属性 
+<div style='position: absolute; top: 50px; left: 50px; z-index: 2;'>
+      文本测试
+</div>
+
+对于 canvas , 可以在元素属性style添加样式，也可以在js里（推荐）修改
+canvas.style = 'position:absolute; top:50px; left:50px; cursor:pointer';
+```
+
 
 
 
